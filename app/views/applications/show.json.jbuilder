@@ -1,0 +1,1 @@
+json.extract! @application, :id, :name, :string, :date_of_birth, :date, :gender, :boolean, :address, :text, :city, :string, :zip_code, :string, :phone_number, :string, :email, :string, :essay, :text, :created_at, :updated_at
