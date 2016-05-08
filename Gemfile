@@ -49,3 +49,7 @@ group :production do
 	gem 'rails_12factor'
 end
 
+#User Authentication and Abilities
+gem 'devise'
+gem 'cancancan'
+
