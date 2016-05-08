@@ -1,5 +1,57 @@
-/*Styles for Text Elements*/
+/*Navbar*/
+
+
+/*Styles for HTML Elements*/
+
+.center-element {
+	display: block;
+	margin: 0 auto;
+}
+
+/*Font Styles and Text*/
 
 .center {
 	text-align: center;
+}
+
+h1 {
+	font-family: Georgia, sans-serif;
+}
+
+h2 {
+	font-family: Georgia, sans-serif;
+}
+
+h3 {
+	font-family: Georgia, sans-serif;
+}
+
+h4 {
+	font-family: Georgia, sans-serif;
+}
+
+h5 {
+	font-family: Georgia, sans-serif;
+}
+
+h6 {
+	font-family: Georgia, sans-serif;
+}
+
+p {
+	color: gray;
+	font-size: medium;
+	font-family: Georgia, sans-serif;
+}
+
+li {
+	color: gray;
+	font-size: medium;
+	font-family: Georgia, sans-serif;
+}
+
+ul {
+	color: gray;
+	font-size: medium;
+	font-family: Georgia, sans-serif;
 }
