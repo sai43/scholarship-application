@@ -38,6 +38,12 @@ h6 {
 	font-family: Georgia, sans-serif;
 }
 
+a {
+	color: gray;
+	font-size: medium;
+	font-family: Georgia, sans-serif;
+}
+
 p {
 	color: gray;
 	font-size: medium;
@@ -54,4 +60,22 @@ ul {
 	color: gray;
 	font-size: medium;
 	font-family: Georgia, sans-serif;
+}
+
+ol {
+	color: gray;
+	font-size: medium;
+	font-family: Georgia, sans-serif;
+}
+
+/*Instructions page*/
+
+.elgibility-box {
+	background-color: #d1d1e0;
+	color: #fff;
+}
+
+.scholar-box {
+	background-color: #d1d1e0;
+	color: #fff;
 }
