@@ -22,9 +22,22 @@
     <li class="nav-item">
       <a class="nav-link" href="/static_pages/instructions">How To Apply</a>
     </li>
+    <% if user_signed_in? %>
+    	<li class="nav-item">
+    		<a class="nav-link" href="/applications">Your Application</a>
+    	</li>
+    <% else %>
+  	<% end %>
     <li class="nav-item">
-      <a class="nav-link" href="/static_pages/contact">Our Scholars</a>
+      <a class="nav-link" href="/static_pages/scholars">Our Scholars</a>
     </li>
+     <li class="nav-item">
+  <% if user_signed_in? %>
+    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+  <% else %>
+    <%= link_to('Login', new_user_session_path) %>
+  <% end %>
+  </li>
   </ul>
 </nav>
     <p class="notice"><%= notice %></p>

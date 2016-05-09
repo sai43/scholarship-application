@@ -2,40 +2,14 @@
 
 one:
   name: MyString
-  string: MyString
-  date_of_birth: MyString
-  date: MyString
   gender: MyString
-  boolean: MyString
-  address: MyString
-  text: MyString
-  city: MyString
-  string: MyString
-  zip_code: MyString
-  string: MyString
-  phone_number: MyString
-  string: MyString
-  email: MyString
-  string: MyString
-  essay: MyString
-  text: MyString
+  date_of_birth: 2016-05-08
+  gpa: MyString
+  essay: MyText
 
 two:
   name: MyString
-  string: MyString
-  date_of_birth: MyString
-  date: MyString
   gender: MyString
-  boolean: MyString
-  address: MyString
-  text: MyString
-  city: MyString
-  string: MyString
-  zip_code: MyString
-  string: MyString
-  phone_number: MyString
-  string: MyString
-  email: MyString
-  string: MyString
-  essay: MyString
-  text: MyString
+  date_of_birth: 2016-05-08
+  gpa: MyString
+  essay: MyText

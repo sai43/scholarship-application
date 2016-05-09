@@ -18,7 +18,7 @@ class ApplicationsControllerTest < ActionController::TestCase
 
   test "should create application" do
     assert_difference('Application.count') do
-      post :create, application: { address: @application.address, boolean: @application.boolean, city: @application.city, date: @application.date, date_of_birth: @application.date_of_birth, email: @application.email, essay: @application.essay, gender: @application.gender, name: @application.name, phone_number: @application.phone_number, string: @application.string, string: @application.string, string: @application.string, string: @application.string, string: @application.string, text: @application.text, text: @application.text, zip_code: @application.zip_code }
+      post :create, application: { date_of_birth: @application.date_of_birth, essay: @application.essay, gender: @application.gender, gpa: @application.gpa, name: @application.name }
     end
 
     assert_redirected_to application_path(assigns(:application))
@@ -35,7 +35,7 @@ class ApplicationsControllerTest < ActionController::TestCase
   end
 
   test "should update application" do
-    patch :update, id: @application, application: { address: @application.address, boolean: @application.boolean, city: @application.city, date: @application.date, date_of_birth: @application.date_of_birth, email: @application.email, essay: @application.essay, gender: @application.gender, name: @application.name, phone_number: @application.phone_number, string: @application.string, string: @application.string, string: @application.string, string: @application.string, string: @application.string, text: @application.text, text: @application.text, zip_code: @application.zip_code }
+    patch :update, id: @application, application: { date_of_birth: @application.date_of_birth, essay: @application.essay, gender: @application.gender, gpa: @application.gpa, name: @application.name }
     assert_redirected_to application_path(assigns(:application))
   end
 
