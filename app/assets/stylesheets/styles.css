@@ -79,3 +79,16 @@ ol {
 	background-color: #d1d1e0;
 	color: #fff;
 }
+
+/*Applications*/
+
+.field {
+	color: gray;
+	font-size: medium;
+	font-family: Georgia, sans-serif
+}
+
+.essay-form {
+	height: 300px;
+	width: 600px
+}

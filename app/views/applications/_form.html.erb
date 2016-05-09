@@ -16,6 +16,7 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
+    <%= f.label :gender %><br>
     <%= f.radio_button :gender, 'Male' %>Male<br>
     <%= f.radio_button :gender, 'Female' %>Female
   </div>
@@ -24,12 +25,12 @@
     <%= f.date_select :date_of_birth %>
   </div>
   <div class="field">
-    <%= f.label :gpa %><br>
-    <%= f.text_field :gpa %>
+    <%= f.label :gpa, 'GPA' %><br>
+    <%= f.select :gpa, ['1.0-2.5', '2.5-3.0', '3.0-3.5', '3.5-4.0', '4.0 and Above']%>
   </div>
   <div class="field">
     <%= f.label :essay %><br>
-    <%= f.text_area :essay %>
+    <%= f.text_area :essay, :class => "essay-form" %>
   </div>
   <div class="actions">
     <%= f.submit %>
