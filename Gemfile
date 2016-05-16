@@ -52,3 +52,4 @@ end
 #User Authentication and Abilities
 gem 'devise'
 gem 'cancancan'
+gem 'jquery-ui-rails'

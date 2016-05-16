@@ -1,7 +1,7 @@
 /*Landing Page*/
  /*Animations to show statistics on page load on landing page*/
 $(document).on('ready page:load', function(){
-    $('#datepicker').datepicker();
+    $('.datepicker').datepicker();
 	$('.statistics-counter').each(function () {
 		$(this).prop('Counter',0).animate({
 			Counter: $(this).text()
