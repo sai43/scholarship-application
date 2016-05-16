@@ -23,14 +23,15 @@
   <div class="field">
     <%= f.label :date_of_birth %><br>
     <%= f.date_select :date_of_birth, :start_year => 1940, :end_year => 2016 %>
+    <input type="text" name="datepicker" class="datepicker">
   </div>
   <div class="field">
     <%= f.label :gpa, 'GPA' %><br>
     <%= f.select :gpa, ['1.0-2.5', '2.5-3.0', '3.0-3.5', '3.5-4.0', '4.0 and Above']%>
   </div>
   <div class="field">
-    <%= f.label :university, 'Intended Institution', :id => "university-field"%><br>
-    <%= f.text_field :university %>
+    <%= f.label :university, 'Intended Institution'%><br>
+    <%= f.text_field :university, :id => "university-field" %>
   </div>
   <div class="field">
     <%= f.label :essay, 'Essay (1000 character limit)' %><br>

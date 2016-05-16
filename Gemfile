@@ -52,4 +52,3 @@ end
 #User Authentication and Abilities
 gem 'devise'
 gem 'cancancan'
-
