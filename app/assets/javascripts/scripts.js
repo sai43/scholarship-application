@@ -1,7 +1,13 @@
+/*List of Available Tags for jquery autocomplete*/
+var availableTags = [
+"University of Maine",
+"University of Southern Florida",
+"University of Maryland"
+];
+
 /*Landing Page*/
- /*Animations to show statistics on page load on landing page*/
 $(document).on('ready page:load', function(){
-    $('.datepicker').datepicker();
+    /*Animations to show statistics counter on page load on landing page*/
 	$('.statistics-counter').each(function () {
 		$(this).prop('Counter',0).animate({
 			Counter: $(this).text()
@@ -12,8 +18,13 @@ $(document).on('ready page:load', function(){
         		$(this).text(Math.ceil(now));
         	}
         });
+        /*jQuery UI Autocomplete for University Search Form*/
+        $(".university-field").autocomplete({
+            source: availableTags
+        });
     });
- });
+});
+
 
 
 /*Applications*/
