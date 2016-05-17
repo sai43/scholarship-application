@@ -1,10 +1,9 @@
 /*List of Available Tags for jquery autocomplete*/
-var availableTags = [
+var data = [
+"University of Maryland",
 "University of Maine",
-"University of Southern Florida",
-"University of Maryland"
+"Harvard"
 ];
-
 /*Landing Page*/
 $(document).on('ready page:load', function(){
     /*Animations to show statistics counter on page load on landing page*/
@@ -17,10 +16,6 @@ $(document).on('ready page:load', function(){
         	step: function (now) {
         		$(this).text(Math.ceil(now));
         	}
-        });
-        /*jQuery UI Autocomplete for University Search Form*/
-        $(".university-field").autocomplete({
-            source: availableTags
         });
     });
 });
@@ -40,4 +35,13 @@ function updateCounter(){
      } else {
      	$("#char-limit").empty().append();
      }
+ };
+
+ /*This shows an autocomplete of available universities from a list*/
+ function updateUniSearch() {
+    /*jQuery UI Autocomplete for University Search Form*/
+    $("#university-field").autocomplete({
+        dataType: "json",
+        resource_uri: ".../api/0.1/institutions/?offset=20&limit=20&format=json"
+    });
  };

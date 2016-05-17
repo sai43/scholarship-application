@@ -23,7 +23,6 @@
   <div class="field">
     <%= f.label :date_of_birth %><br>
     <%= f.date_select :date_of_birth, :start_year => 1940, :end_year => 2016 %>
-    <input type="text" name="datepicker" class="datepicker">
   </div>
   <div class="field">
     <%= f.label :gpa, 'GPA' %><br>
@@ -31,15 +30,12 @@
   </div>
   <div class="field ui-widgit">
     <%= f.label :university, 'Intended Institution'%><br>
-    <%= f.text_field :university, :id => "university-field" %>
+    <%= f.text_field :university, :id => "university-field", :onkeydown=>"updateUniSearch()" %>
   </div>
   <div class="field">
     <%= f.label :essay, 'Essay (1000 character limit)' %><br>
     <p id="char-limit"></p>
     <%= f.text_area :essay, :class => "essay-form", :onkeydown=>"updateCounter()", :limit => 1000 %>
-  </div>
-  <div class="ui-widget">
-    <input class="university-field">
   </div>
   <div class="actions">
     <%= f.submit %>
