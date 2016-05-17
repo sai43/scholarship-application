@@ -2,7 +2,7 @@
 
 As another practice project for Rails, this is a mock scholarship application to brush off some dust off my rails skills and solidify my understanding of the MVC framework concept. Here will be the key features:
 
--List of universities to be pulled from a json list and be filled into an jquery UI autocomplete form via AJAX
+-The application interface will feature of universities to be pulled from a json list and be filled into an jquery UI autocomplete form via AJAX, the first time I have implemented AJAX.
 
 I also plan on following all the general guidelines of making a RESTFUL app and follow DRY principles, to be explained in greater detail soon.
 
