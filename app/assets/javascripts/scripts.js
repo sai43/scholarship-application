@@ -42,8 +42,6 @@ function updateCounter(){
     /*jQuery UI Autocomplete for University Search Form*/
     $("#university-field").autocomplete({
         dataType: "json",
-        source: "http://universities.hipolabs.com",
-        async: true,
-        crossdomain: true
+        source: "world_universities_and_domains.json",
     });
  };

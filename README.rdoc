@@ -1,8 +1,11 @@
 == Scholarship Application
 
-As another practice project for Rails, this is a mock scholarship application. Here will be the key features:
+As another practice project for Rails, this is a mock scholarship application to brush off some dust off my rails skills and solidify my understanding of the MVC framework concept. Here will be the key features:
 
--Utilization of an API to dyamically show a list of possible universities when applicants apply for the scholarship.
+-List of universities to be pulled from a json list and be filled into an jquery UI autocomplete form via AJAX
 
+I also plan on following all the general guidelines of making a RESTFUL app and follow DRY principles, to be explained in greater detail soon.
 
 More to come.
+
+Live demo (very preliminary as of 5/17/2016): http://secure-everglades-84289.herokuapp.com/
