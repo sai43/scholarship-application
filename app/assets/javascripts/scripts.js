@@ -30,11 +30,12 @@ function updateCounter(){
      }
  }
 
- /*jqueryUi only works from a pure array, so the data provided in the form of an array of objects
-must all be converted to an array for autocomplete. Refer to "usstates.js" file for the data. /*/
+ /*jqueryUi only works from a pure array, so the data for our search forms, which are
+provided in the form of an array of objects must all be converted to an array of strings
+for autocomplete. Refer to "usstates.js" and "worlduniversities.js" file for the data. /*/
 var statesArray = [];
 $(document).on('ready page:load', function(){
-    for (var i = 0; i <allStates.length; i ++) {
+    for (var i = 0; i <allStates.length; i++) {
         statesArray.push(allStates[i].name);
     }
 })
@@ -45,4 +46,21 @@ function updateStateSearch() {
             source: statesArray
         });
 }
+
+var uniArray = [];
+$(document).on('ready page:load', function() {
+    for (var i = 0; i <worldUniversities.length; i++) {
+        if (worldUniversities[i].country === "Canada" || worldUniversities[i].country === "USA") {
+            uniArray.push(worldUniversities[i].name);
+        }
+    }
+})
+
+ /*This shows only American or Canadian universities.*/
+function updateUniSearch() {
+    $("#uni-field").autocomplete({
+            source: uniArray
+        });
+}
+
 

@@ -37,8 +37,8 @@
     <%= f.text_field :state, :id => "state-field", :onkeydown=>"updateStateSearch()" %>
   </div>
   <div class="field">
-    <%= f.label :university, 'Intended Institution'%><br>
-    <%= f.text_field :university%>
+    <%= f.label :university, "Intended Institution"%><br>
+    <%= f.text_field :university, :id => "uni-field", :onkeydown=> "updateUniSearch()"%>
   </div>
   <div class="field">
     <%= f.label :essay, 'Essay (1000 character limit)' %><br>
