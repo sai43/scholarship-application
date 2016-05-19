@@ -1,11 +1,7 @@
 == Scholarship Application
 
-As another practice project for Rails, this is a mock scholarship application to brush off some dust off my rails skills and solidify my understanding of the MVC framework concept. Here will be the key features:
-
--The application interface will feature of universities to be pulled from a json list and be filled into an jquery UI autocomplete form via AJAX, the first time I have implemented AJAX.
-
-I also plan on following all the general guidelines of making a RESTFUL app and follow DRY principles, to be explained in greater detail soon.
+As another practice project for Rails, this is a mock scholarship application to brush off some dust off my rails skills and solidify my understanding of the MVC framework concept. Since I've primarily been working on javascript, objects, arrays, and all that jazz the past few months, I plan on doing a bit of that in this app to showcase what I've learned to apply it in a practical context.
 
 More to come.
 
-Live demo (very preliminary as of 5/17/2016): http://secure-everglades-84289.herokuapp.com/
+Live demo (very preliminary as of 5/18/2016): http://secure-everglades-84289.herokuapp.com/

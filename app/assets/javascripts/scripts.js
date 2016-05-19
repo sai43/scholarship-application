@@ -56,7 +56,7 @@ $(document).on('ready page:load', function() {
     }
 })
 
- /*This shows only American or Canadian universities.*/
+ /*This shows an autocomplete of American or Canadian universities.*/
 function updateUniSearch() {
     $("#uni-field").autocomplete({
             source: uniArray
