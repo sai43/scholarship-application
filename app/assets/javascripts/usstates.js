@@ -236,20 +236,3 @@ var allStates = [
         "abbreviation": "WY"
     }
 ];
-
-/*jqueryUi only works from a pure array,  so the data provided in the form of an array of objects
-and then converted to array to be used autocomplete). /*/
-var statesArray = [];
-$(document).on('ready page:load', function(){
-    for (var i = 0; i <allStates.length; i ++) {
-        statesArray.push(allStates[i].name);
-    }
-})
-
- /*This shows an autocomplete of all US states.*/
-function updateStateSearch() {
-    $("#state-field").autocomplete({
-            source: statesArray
-        });
-}
-

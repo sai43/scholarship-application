@@ -52,4 +52,7 @@ end
 #User Authentication and Abilities
 gem 'devise'
 gem 'cancancan'
+# For autocomplete
 gem 'jquery-ui-rails'
+#For gir ignore
+gem 'dotenv-rails'
