@@ -68,6 +68,12 @@ ol {
 	font-family: Georgia, sans-serif;
 }
 
+/*Landing Page*/
+
+#landing-page {
+	background-image: url('<%= @nasa_info["url"]%>');
+}
+
 /*Instructions page*/
 
 .elgibility-box {

@@ -54,5 +54,5 @@ gem 'devise'
 gem 'cancancan'
 # For autocomplete
 gem 'jquery-ui-rails'
-#For gir ignore
+#For git ignore
 gem 'dotenv-rails'
