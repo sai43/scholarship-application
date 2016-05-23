@@ -1,4 +1,6 @@
-/*On page load*/
+/*Landing Page*/
+
+/*Counter: On page load*/
 var statesArray = [];
 $(document).on('ready page:load', function(){
     /*Animations to show statistics counter on page load on landing page*/
@@ -13,6 +15,11 @@ $(document).on('ready page:load', function(){
             }
         });
     });
+});
+
+/*Jquery Arc Text: On Page Load*/
+$(document).on('ready page:load', function(){
+    $("#page-title").hide().show().arctext({radius: 300});
 });
 
 /*Applications*/
