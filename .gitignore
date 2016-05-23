@@ -12,3 +12,5 @@
 !/log/.keep
 /tmp
 .env
+
+#Admin role is admin@example.com password Password123
