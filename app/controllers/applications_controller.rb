@@ -1,4 +1,6 @@
 class ApplicationsController < ApplicationController
+  #Users who are not signed in cannot view scholarship applications
+  before_action :authenticate_user!
   before_action :set_application, only: [:show, :edit, :update, :destroy]
 
   # GET /applications
@@ -70,5 +72,11 @@ class ApplicationsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def application_params
       params.require(:application).permit(:name, :gender, :date_of_birth, :gpa, :address, :state, :university, :essay)
+    end
+
+    #Users can only view their own profiles
+
+    def user_authorization
+      redirect_to(root_url) unless current_user.id == params[:id]
     end
 end

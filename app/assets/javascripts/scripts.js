@@ -17,11 +17,6 @@ $(document).on('ready page:load', function(){
     });
 });
 
-/*Jquery Arc Text: On Page Load*/
-$(document).on('ready page:load', function(){
-    $("#page-title").hide().show().arctext({radius: 300});
-});
-
 /*Applications*/
 /*These notifies user of their current character count during application "essay" submission*/
 function updateCounter(){
