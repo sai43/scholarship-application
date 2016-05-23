@@ -56,3 +56,5 @@ gem 'cancancan'
 gem 'jquery-ui-rails'
 #For git ignore
 gem 'dotenv-rails'
+#Bootstrap Form
+gem 'bootstrap_form'

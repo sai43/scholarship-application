@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :applications
-  devise_for :users
+  devise_for :users, :controllers => { registrations: 'registrations' }
   resources :users
   get 'static_pages/scholars'
 
