@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   #Users who are not signed in cannot view users list
   before_filter :authenticate_user!
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
 
   # GET /users
   # GET /users.json
