@@ -18,12 +18,14 @@ Guest
 
 Automatic testing
 
-Gems Used:
+Gems That Will be Used (Tentativee):
 
 devise: User Authentication
 cancan: User Abilities
 jquery-ui-rails: Autocomplete for Universities and States in Scholarship Applications
 rspec: testing
+
+To Do List as of 5/24: Fix user authorization
 
 
 More to come.
