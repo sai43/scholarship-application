@@ -1,11 +1,30 @@
 == Scholarship Application
 
-As another practice project for Rails, this is a mock scholarship application.
+Project Explanation/Goal: As another practice project for Rails, this is a mock scholarship application to reinforce my knowledge of MVC web application architecture. Here will be some features by the end of the application:
 
-Skills/Technologies Explored in this project:
 
--How to Implement API's: NASA
--Javasript Object/Array Manipulation
+Note: As an afterthought, naming a controller "applications" was a poor naming convention- if I were to do this again I would have chosen something along the line of "scholarships".
+
+Users
+Administrator
+-A single admin can view all user profiles and scholarship applications, and edit what they please.
+
+User
+-Signed in users can only view their own scholarship application and can only submit one. They can also only view and edit their own profile
+-After a user creates a new application, the admin will receive an e-mail that a new application was submitted.
+
+Guest
+-Anyone not signed in can view the static pages, but cannot view/edit/create etc. users or scholarship applications
+
+Automatic testing
+
+Gems Used:
+
+devise: User Authentication
+cancan: User Abilities
+jquery-ui-rails: Autocomplete for Universities and States in Scholarship Applications
+rspec: testing
+
 
 More to come.
 
