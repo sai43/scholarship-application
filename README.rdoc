@@ -1,6 +1,6 @@
 == Scholarship Application
 
-Project Explanation/Goal: As another practice project for Rails, this is a mock scholarship application to reinforce my knowledge of MVC web application architecture. Here will be some features by the end of the application:
+Project Explanation/Goal: As another practice project for Rails, this is a mock scholarship application to reinforce my knowledge of MVC web application architecture. Since this is mostly a backend learning project, creating fancy fancy views and styling will be my last step. Here will be some features by the end of the application:
 
 
 Note: As an afterthought, naming a controller "applications" was a poor naming convention- if I were to do this again I would have chosen something along the line of "scholarships".

@@ -14,3 +14,4 @@
 .env
 
 #Admin role is admin@example.com password Password123
+#First user non admin is user1@example.com password Password678

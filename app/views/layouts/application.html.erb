@@ -33,6 +33,11 @@
     <li class="nav-item">
       <a class="nav-link" href="/static_pages/scholars">Our Scholars</a>
     </li>
+    <% if user_signed_in? %>
+    <li class="nav-item">
+      <a class="nav-link" href="/users">Account Settings</a>
+    </li>
+    <% end %>
      <li class="nav-item">
   <% if user_signed_in? %>
     <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
@@ -42,6 +47,7 @@
   </li>
   </ul>
 </nav>
+
 <% if user_signed_in? %>
 <h4 class="center"> Welcome <%= current_user.first_name %>!</h4>
 <% end %>
