@@ -12,6 +12,8 @@
     </tr>
   </thead>
 
+  <% if user_signed_in? && current_user.role = 1 %>
+
   <tbody>
     <% @users.each do |user| %>
       <tr>
@@ -26,6 +28,21 @@
   </tbody>
 </table>
 
+  <% elsif user_signed_in? && current_user.role = 2 %>
+  <tbody>
+    <tr>
+        <td><%= current_user.first_name %></td>
+        <td><%= current_user.last_name %></td>
+        <td><%= current_user.email %></td>
+      </tr>
+    </tbody>
+  </table>
+  <% end %>
+
+
+
 <br>
 
-<%= link_to 'New User', new_user_path if current_user.admin? %>
+<%= link_to 'New User', new_user_path %>
+
+

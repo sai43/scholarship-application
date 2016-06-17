@@ -2,7 +2,6 @@ class Application < ActiveRecord::Base
 	belongs_to :user
 
 	#User must fully fill out application
-
 	validates :name, presence: true
 	validates :gender, presence: true
 	validates :date_of_birth, presence: true

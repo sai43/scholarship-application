@@ -51,6 +51,15 @@
 <% if user_signed_in? %>
 <h4 class="center"> Welcome <%= current_user.first_name %>!</h4>
 <% end %>
+<% if user_signed_in? && current_user.role = 1 %>
+
+<h4 class="center"> You are an administrator, you can view all applications, edit them, delete users, and more!!</h4>
+<% elsif user_signed_in? && current_user.role = 2 %>
+<h4 class="center"> Thank you for your interest in our scholarship. You may create an application now that you are signed in.</h4>
+
+<% else %>
+
+<% end %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
