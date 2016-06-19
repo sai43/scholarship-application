@@ -22,7 +22,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    @user = current.user
+    @user = current_user
   end
 
   # POST /users

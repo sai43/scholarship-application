@@ -5,11 +5,11 @@ class Ability
     user ||= User.new # guest user (not logged in)
     	if user.role = 1
     		can :manage, :all
-    	elsif
+    	elsif user.role = 2
             can :manage, Application
             can :manage, User
         else
-            can :read, Application
+            can :read, Static_Page
     	end
     end
 end

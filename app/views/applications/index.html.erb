@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Your Application</h1>
+<% if user_signed_in? && current_user.role = 1 %>
+
+<h1 class="center">All User Applications</h1>
 
 <table class="table">
   <thead>
@@ -35,6 +37,46 @@
     <% end %>
   </tbody>
 </table>
+
+<% elsif user_signed_in? && current_user.role = 2 %>
+
+
+<h1 class="center">Your Application</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Date of birth</th>
+      <th>GPA</th>
+      <th>Address</th>
+      <th>State</th>
+      <th>University</th>
+      <th>Essay</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><%= current_user.application.name %></td>
+        <td><%= current_user.application.gender %></td>
+        <td><%= current_user.application.date_of_birth %></td>
+        <td><%= current_user.application.gpa %></td>
+        <td><%= current_user.application.address %></td>
+        <td><%= current_user.application.state %></td>
+        <td><%= current_user.application.university %></td>
+        <td><%= current_user.application.essay %></td>
+        <td><%= link_to 'Show', current_user.application %></td>
+        <td><%= link_to 'Edit', current_user.edit_application_path(application) %></td>
+        <td><%= link_to 'Destroy', current_user.application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  </tbody>
+</table>
+
+<% else %>
+<% end %>
 
 <br>
 
