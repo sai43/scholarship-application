@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 	#Defining different roles
-	enum role: [:Admin, :User]
+	enum role: [:Guest, :User, :Admin]
 	#Users can only have one scholarship application
 	has_one :applications
   # Include default devise modules. Others available are:

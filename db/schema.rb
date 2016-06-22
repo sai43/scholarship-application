@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20160621234650) do
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
-    t.integer  "role",                   default: 2
+    t.integer  "role",                   default: 1
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
