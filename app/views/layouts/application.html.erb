@@ -33,11 +33,11 @@
     <li class="nav-item">
       <a class="nav-link" href="/static_pages/scholars">Our Scholars</a>
     </li>
-    <% if user_signed_in? && current_user.role = 1%>
+    <% if user_signed_in? && current_user.role == "Admin"%>
     <li class="nav-item">
       <a class="nav-link" href="/users">Admin CP</a>
     </li>
-    <% elsif user_signed_in? && current_user.role = 2 %>
+    <% elsif user_signed_in? && current_user.role == "User" %>
     <li class="nav-item">
       <a class="nav-link" href="/users">Account Settings</a>
     </li>
@@ -58,10 +58,10 @@
 <% if user_signed_in? %>
 <h4 class="center"> Welcome <%= current_user.first_name %>!</h4>
 <% end %>
-<% if user_signed_in? && current_user.role = "Admin" %>
+<% if user_signed_in? && current_user.role == "Admin" %>
 
 <h4 class="center"> You are a <%= current_user.role %>, you can view all applications, edit them, delete users, and more!!</h4>
-<% elsif user_signed_in? && current_user.role = "User" %>
+<% elsif user_signed_in? && current_user.role == "User" %>
 <h4 class="center"> Thank you for your interest in our scholarship. As a <%= current_user.role %>, you may create, edit, or delete your scholarship application now that you are signed in.</h4>
 
 <% else %>

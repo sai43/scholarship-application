@@ -3,9 +3,9 @@ class Ability
 
   def initialize(user)
     user ||= User.new # guest user (not logged in)
-    	if user.role = 1
+    	if user.role = "Admin"
     		can :manage, :all
-    	elsif user.role = 2
+    	elsif user.role = "User"
             can :manage, Application
             can :manage, User
         else

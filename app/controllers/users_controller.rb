@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user
+  include Devise::Controllers::Helpers
+  before_action :authenticate_user!
   #Users who are not signed in cannot view users list
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
