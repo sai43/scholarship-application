@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   #Users who are not signed in cannot view users list
-  before_filter :authenticate_user!
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
 
@@ -69,5 +68,10 @@ class UsersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
+    end
+
+    #Never trust paramaters from the scary internet, man.
+    def user_params
+      params.require(:user).permit(:first_name, :last_name)
     end
 end

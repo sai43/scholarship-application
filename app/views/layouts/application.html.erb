@@ -60,9 +60,9 @@
 <% end %>
 <% if user_signed_in? && current_user.role = "Admin" %>
 
-<h4 class="center"> You are an administrator, you can view all applications, edit them, delete users, and more!!</h4>
+<h4 class="center"> You are a <%= current_user.role %>, you can view all applications, edit them, delete users, and more!!</h4>
 <% elsif user_signed_in? && current_user.role = "User" %>
-<h4 class="center"> Thank you for your interest in our scholarship. You may create, edit, or delete your scholarship application now that you are signed in.</h4>
+<h4 class="center"> Thank you for your interest in our scholarship. As a <%= current_user.role %>, you may create, edit, or delete your scholarship application now that you are signed in.</h4>
 
 <% else %>
 <h4 class="center"> Welcome to the Philanthropist's Scholarship Application! Please create an account to apply for our scholarship!</h4>
