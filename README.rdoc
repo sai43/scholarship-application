@@ -11,7 +11,7 @@ Administrator
 
 User
 -Signed in users can only create, read, update, and destroy their own scholarship application. They can also only create one.
--Users can only read, update, and destroy their own profile. While signed in, they cannot create, read, update or destroy other users.
+-Users can only read, update, and destroy their own profile (they cannot edit their role though!). While signed in, they cannot create, read, update or destroy other users.
 
 Guest
 -Anyone not signed in can view the static pages, but cannot view/edit/create etc. users or scholarship applications
