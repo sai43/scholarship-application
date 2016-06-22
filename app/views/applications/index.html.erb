@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<% if user_signed_in? && current_user.role == 2 %>
+<% if user_signed_in? && current_user.role == "Admin" %>
 
 <h1 class="center">All User Applications</h1>
 
@@ -30,15 +30,15 @@
         <td><%= application.state %></td>
         <td><%= application.university %></td>
         <td><%= application.essay %></td>
-        <td><%= link_to 'Show', application %></td>
-        <td><%= link_to 'Edit', edit_application_path(application) %></td>
-        <td><%= link_to 'Destroy', application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', application, class: "btn btn-primary", style: "color:white" %></td>
+        <td><%= link_to 'Edit', edit_application_path(application), class: "btn btn-warning", style: "color:white" %></td>
+        <td><%= link_to 'Destroy', application, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger", style: "color:white" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<% elsif user_signed_in? && current_user.role == 1 %>
+<% elsif user_signed_in? && current_user.role == "User" %>
 
 
 <h1 class="center">Your Application</h1>
@@ -80,4 +80,4 @@
 
 <br>
 
-<button type="button" class="btn btn-success center-element"><%= link_to 'New Application', new_application_path, :class =>"" %></button>
+<%= link_to 'New Application', new_application_path, class: "btn btn-primary", style: "color:white" %>

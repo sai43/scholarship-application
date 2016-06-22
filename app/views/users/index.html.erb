@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-  <% if user_signed_in? && current_user.role == 2 %>
+  <% if user_signed_in? && current_user.role == "Admin" %>
 
 
 <h1 class="center">Admin CP</h1>
@@ -23,15 +23,15 @@
         <td><%= user.last_name %></td>
         <td><%= user.email %></td>
         <td><%= user.role %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', user, class: "btn btn-primary", style: "color:white" %></td>
+        <td><%= link_to 'Edit', edit_user_path(user), class: "btn btn-warning", style: "color:white" %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger", style: "color:white" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-  <% elsif user_signed_in? && current_user.role = 1 %>
+  <% elsif user_signed_in? && current_user.role == "User" %>
   <h1 class="center">Account Settings</h1>
 
   <table class="table">
@@ -57,6 +57,8 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<% if user_signed_in? && current_user.role == "Admin" %>
+<%= link_to 'New User', new_user_path, class: "btn btn-primary", style: "color:white" %>
+<% end %>
 
 

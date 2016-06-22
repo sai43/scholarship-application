@@ -7,7 +7,7 @@ class Ability
     		can :manage, :all
     	elsif user.role == "User"
             can :manage, Application
-            can :read, User
+            can :manage, User
         else
             can :read, Static_Page
     	end
