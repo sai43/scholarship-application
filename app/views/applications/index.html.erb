@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<% if user_signed_in? && current_user.role = 1 %>
+<% if user_signed_in? && current_user.role == 2 %>
 
 <h1 class="center">All User Applications</h1>
 
@@ -38,7 +38,7 @@
   </tbody>
 </table>
 
-<% elsif user_signed_in? && current_user.role = 2 %>
+<% elsif user_signed_in? && current_user.role == 1 %>
 
 
 <h1 class="center">Your Application</h1>
@@ -80,4 +80,4 @@
 
 <br>
 
-<%= link_to 'New Application', new_application_path %>
+<button type="button" class="btn btn-success center-element"><%= link_to 'New Application', new_application_path, :class =>"" %></button>

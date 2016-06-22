@@ -7,11 +7,11 @@ Note: As an afterthought, naming a controller "applications" was a poor naming c
 
 Users
 Administrator
--A single admin can view all user profiles and scholarship applications, and edit what they please.
+-A single admin can manage all.
 
 User
--Signed in users can only view their own scholarship application and can only submit one. They can also only view and edit their own profile
--After a user creates a new application, the admin will receive an e-mail that a new application was submitted.
+-Signed in users can only create, read, update, and destroy their own scholarship application. They can also only create one.
+-Users can only read, update, and destroy their own profile. While signed in, they cannot create, read, update or destroy other users.
 
 Guest
 -Anyone not signed in can view the static pages, but cannot view/edit/create etc. users or scholarship applications
@@ -25,8 +25,7 @@ cancan: User Abilities
 jquery-ui-rails: Autocomplete for Universities and States in Scholarship Applications
 rspec: testing
 
-To Do List as of 5/24: Fix user authorization
-
+As of 6/21: Perfecting all user authorization.
 
 More to come.
 
