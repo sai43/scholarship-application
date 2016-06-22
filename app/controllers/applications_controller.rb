@@ -74,10 +74,4 @@ class ApplicationsController < ApplicationController
     def application_params
       params.require(:application).permit(:name, :gender, :date_of_birth, :gpa, :address, :state, :university, :essay)
     end
-
-    #Users can only view their own profiles
-
-    def user_authorization
-      redirect_to(root_url) unless current_user.id == params[:id]
-    end
 end
