@@ -23,9 +23,9 @@
         <td><%= user.last_name %></td>
         <td><%= user.email %></td>
         <td><%= user.role %></td>
-        <td><%= link_to 'Show', user, class: "btn btn-primary", style: "color:white" %></td>
+        <td><%= link_to 'Show', user, class: "btn btn-success", style: "color:white" %></td>
         <td><%= link_to 'Edit', edit_user_path(user), class: "btn btn-warning", style: "color:white" %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger", style: "color:white" %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure you wish to delete this user? This cannot be undone.' }, class: "btn btn-danger", style: "color:white" %></td>
       </tr>
     <% end %>
   </tbody>
