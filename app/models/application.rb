@@ -13,14 +13,12 @@ class Application < ActiveRecord::Base
 	validates :address, presence: true
 	validates :state, presence: true
 
-	private
-
 
 	private
 	def limit_applications
 		limit = 1
-		if self.applications.count >= limit
+		if self.user.applications(:reload).count >= limit
 			errors.add(:base, "You can only create #{limit} application.")
-    	end
-     end
+    		end
+     	end
  end
