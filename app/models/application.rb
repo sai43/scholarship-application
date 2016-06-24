@@ -1,7 +1,10 @@
 class Application < ActiveRecord::Base
 	belongs_to :user
 
-	#User must fully fill out application
+	#Users may only submit one application
+	validate :limit_applications, :on => :create
+
+	#User must fully fill out all forms application
 	validates :name, presence: true
 	validates :gender, presence: true
 	validates :date_of_birth, presence: true
@@ -9,4 +12,15 @@ class Application < ActiveRecord::Base
 	validates :university, presence: true
 	validates :address, presence: true
 	validates :state, presence: true
-end
+
+	private
+
+
+	private
+	def limit_applications
+		limit = 1
+		if self.applications.count >= limit
+			errors.add(:base, "You can only create #{limit} application.")
+    	end
+     end
+ end
