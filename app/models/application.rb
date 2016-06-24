@@ -18,6 +18,6 @@ class Application < ActiveRecord::Base
 		limit = 1
 		if self.user.applications.(:reload).count >= limit
 			errors.add(:base, "You can only create #{limit} application.")
-    	end
-     end
+    		end
+     	end
  end
