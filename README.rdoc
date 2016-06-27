@@ -17,7 +17,7 @@ Guest
 -Anyone not signed in can view the static pages, but cannot view/edit/create etc. users or scholarship applications
 
 Choosing a Scholarship Winner
--I will add a "raffle" page to raffle from the list of users who are registered and completed an application to win. They will then be notified by an automated e-mail.
+-I will add a "raffle" page to raffle from the list of users who are registered and completed an application to win. They will then be notified by an automated e-mail. Angular.JS will be used for this side of things.
 
 Automatic testing
 
