@@ -21,7 +21,7 @@ Choosing a Scholarship Winner
 
 Automatic testing
 
-Gems That Will be Used (Tentativee):
+Gems That Will be Used (Tentative):
 
 devise: User Authentication
 cancan: User Abilities
@@ -32,5 +32,5 @@ As of 6/23: Perfecting all user authorization.
 
 More to come.
 
-Live demo (very preliminary as of 5/18/2016): http://secure-everglades-84289.herokuapp.com/
+Live demo (very preliminary as of 6/23/2016): http://secure-everglades-84289.herokuapp.com/
 

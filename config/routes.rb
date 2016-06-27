@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :entries, defaults: {format: 'json'}
+  get 'raffle/index'
+
+  resources :raffle
   resources :applications
   devise_for :users, :controllers => { registrations: 'registrations' }
   resources :users

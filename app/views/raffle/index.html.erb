@@ -1,0 +1,17 @@
+<h1 class="center">Raffler- Select a winner for the scholarship!</h1>
+
+<div ng-controller="RaffleCtrl">
+	<form ng-submit="addEntry()">
+		<input type="text" ng-model="newEntry.name">
+		<input type="submit" value="Add">
+	</form>
+
+	<ul>
+		<li ng-repeat="entry in entries">
+			{{entry.name}}
+			<span ng-show="entry.winner" ng-class="{highlight: entry == lastWinner}" class="winner">WINNER</SPAN>
+		</li>
+	</ul>
+
+	<button ng-click="drawWinner()">Choose Winner </button>
+</div>
