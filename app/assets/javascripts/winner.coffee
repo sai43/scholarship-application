@@ -6,11 +6,6 @@ app.factory "User", ($resource) ->
 app.controller "RaffleCtrl", (User, $scope) ->
 	$scope.users = User.query()
 
-	$scope.addEntry = ->
-		entry = User.save($scope.newUser)
-		$scope.users.push($scope.newUser)
-		$scope.newUser = {}
-
 	$scope.drawWinner = ->
 		pool = []
 		angular.forEach $scope.users, (user) ->
