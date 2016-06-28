@@ -1,17 +1,20 @@
-<h1 class="center">Raffler- Select a winner for the scholarship!</h1>
+<% if user_signed_in? && current_user.role == "Admin" %>
 
-<div ng-controller="RaffleCtrl">
-	<form ng-submit="addEntry()">
-		<input type="text" ng-model="newEntry.name">
-		<input type="submit" value="Add">
-	</form>
+	<h1 class="center">Raffler- Select a winner for the scholarship!</h1>
 
-	<ul>
-		<li ng-repeat="entry in entries">
-			{{entry.name}}
-			<span ng-show="entry.winner" ng-class="{highlight: entry == lastWinner}" class="winner">WINNER</SPAN>
-		</li>
-	</ul>
+	<div ng-controller="RaffleCtrl">
+		<form ng-submit="addUser()">
+			<input type="text" ng-model="newUser.first_name">
+			<input type="submit" value="Add">
+		</form>
 
-	<button ng-click="drawWinner()">Choose Winner </button>
-</div>
+		<ul>
+			<li ng-repeat="user in users">
+				{{user.first_name}}
+				<span ng-show="entry.winner" ng-class="{highlight: entry == lastWinner}" class="winner">WINNER</SPAN>
+			</li>
+		</ul>
+
+		<button ng-click="drawWinner()">Choose Winner </button>
+	</div>
+<% end %>
