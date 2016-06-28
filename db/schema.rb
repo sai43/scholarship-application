@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160628024251) do
+ActiveRecord::Schema.define(version: 20160628171745) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20160628024251) do
     t.string   "university"
     t.string   "address"
     t.string   "state"
+    t.integer  "user_id"
   end
 
   create_table "entries", force: :cascade do |t|
@@ -58,6 +59,7 @@ ActiveRecord::Schema.define(version: 20160628024251) do
     t.inet     "last_sign_in_ip"
     t.integer  "role",                   default: 1
     t.boolean  "winner",                 default: false
+    t.integer  "application_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
