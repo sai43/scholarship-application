@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'raffle/index'
 
   resources :raffle
-  resources :applications
+  resources :scholarships
   devise_for :users, :controllers => { registrations: 'registrations' }
   resources :users
 
