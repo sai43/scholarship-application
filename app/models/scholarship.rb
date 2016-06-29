@@ -1,8 +1,8 @@
-class Application < ActiveRecord::Base
+class Scholarship < ActiveRecord::Base
 	belongs_to :user
 
 	#Users may only submit one application
-	validate :limit_applications, :on => :create
+	validate :limit_scholarships, :on => :create
 
 	#User must fully fill out all forms application
 	validates :name, presence: true
@@ -14,10 +14,10 @@ class Application < ActiveRecord::Base
 	validates :state, presence: true
 
 	private
-	def limit_applications
+	def limit_scholarships
 		limit = 1
-		if self.user.applications.(:reload).count >= limit
-			errors.add(:base, "You can only create #{limit} application.")
+		if self.user.scholarships.(:reload).count >= limit
+			errors.add(:base, "You can only create #{limit} scholarship.")
     		end
      	end
  end

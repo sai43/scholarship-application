@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @scholarship.name %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @scholarship.gender %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @scholarship.date_of_birth %>
+</p>
+
+<p>
+  <strong>GPA:</strong>
+  <%= @scholarship.gpa %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @scholarship.address %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @scholarship.state %>
+</p>
+
+<p>
+  <strong>University:</strong>
+  <%= @scholarship.university %>
+</p>
+
+<p>
+  <strong>Essay:</strong>
+  <%= @scholarship.essay %>
+</p>
+
+<%= link_to 'Edit', edit_scholarship_path(@scholarship) %> |
+<%= link_to 'Back', scholarships_path %>

@@ -64,3 +64,5 @@ gem 'dotenv-rails'
 gem 'bootstrap_form'
 #Angular
 gem 'angularjs-rails'
+#Responders
+gem 'responders', '~> 2.0'

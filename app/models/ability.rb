@@ -6,7 +6,7 @@ class Ability
     	if user.role == "Admin"
     		can :manage, :all
     	elsif user.role == "User"
-            can :manage, Application
+            can :manage, Scholarship
             can :manage, User
         else
             can :read, Static_Page

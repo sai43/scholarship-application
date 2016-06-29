@@ -11,24 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160628171745) do
+ActiveRecord::Schema.define(version: 20160629222817) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "applications", force: :cascade do |t|
-    t.string   "name"
-    t.string   "gender"
-    t.date     "date_of_birth"
-    t.string   "gpa"
-    t.text     "essay"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.string   "university"
-    t.string   "address"
-    t.string   "state"
-    t.integer  "user_id"
-  end
 
   create_table "entries", force: :cascade do |t|
     t.string   "name"
@@ -40,6 +26,20 @@ ActiveRecord::Schema.define(version: 20160628171745) do
   create_table "nasa_apis", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "scholarships", force: :cascade do |t|
+    t.string   "name"
+    t.string   "gender"
+    t.date     "date_of_birth"
+    t.string   "gpa"
+    t.text     "essay"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "university"
+    t.string   "address"
+    t.string   "state"
+    t.integer  "user_id"
   end
 
   create_table "users", force: :cascade do |t|
