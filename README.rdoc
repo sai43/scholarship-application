@@ -2,9 +2,6 @@
 
 Project Explanation/Goal: As another practice project for Rails, this is a mock scholarship application to reinforce my knowledge of MVC web application architecture. Since this is mostly a backend learning project, creating fancy fancy views and styling will be my last step. Here will be some features by the end of the application:
 
-
-Note: As an afterthought, naming a controller "applications" was a poor naming convention- if I were to do this again I would have chosen something along the line of "scholarships".
-
 Users
 Administrator
 -A single admin can manage all.
@@ -14,7 +11,7 @@ User
 -Users can only read, update, and destroy their own profile (they cannot edit their role though!). While signed in, they cannot create, read, update or destroy other users.
 
 Guest
--Anyone not signed in can view the static pages, but cannot view/edit/create etc. users or scholarship applications
+-Anyone not signed in can view the static pages, but cannot view/edit/create etc. users or scholarships
 
 Choosing a Scholarship Winner
 -I will add a "raffle" page to raffle from the list of users who are registered and completed an application to win. They will then be notified by an automated e-mail. Angular.JS will be used for this side of things. I used the RailsCast Raffler lesson as a guide for learning Angular and implementing it.

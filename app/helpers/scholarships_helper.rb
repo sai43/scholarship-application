@@ -1,2 +1,2 @@
-module ApplicationsHelper
+module ScholarshipsHelper
 end
