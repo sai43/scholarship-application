@@ -32,13 +32,16 @@
   </tbody>
 </table>
 
-<% elsif user_signed_in? && current_user.role == "User" %>
+<% elsif user_signed_in? && current_user.role == "User" && current_user.scholarship.present? %>
 
  <%= render partial: 'current_user_scholarship' %>
 
-<% else %>
+<% elsif user_signed_in? && current_user.role == "User" && current_user.scholarship == nil %>
+
+<p class="center">It appears that you do not have a scholarship on file with us. Click below to get started!</p>
+
+<%= link_to 'New Scholarship', new_scholarship_path, class: "btn btn-primary", style: "color:white" %>
+
 <% end %>
 
 <br>
-
-<%= link_to 'New Scholarship', new_scholarship_path, class: "btn btn-primary", style: "color:white" %>

@@ -15,9 +15,8 @@ class Scholarship < ActiveRecord::Base
 
 	private
 	def limit_scholarships
-		limit = 1
-		if self.user.scholarships.(:reload).count >= limit
+		if user.scholarship.count >= 1
 			errors.add(:base, "You can only create #{limit} scholarship.")
-    		end
-     	end
+    	end
+     end
  end

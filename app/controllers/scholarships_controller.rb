@@ -19,7 +19,7 @@ class ScholarshipsController < ApplicationController
   end
 
   def create
-    @scholarship = Scholarship.new(scholarship)
+    @scholarship = Scholarship.new(scholarship_params)
 
     respond_to do |format|
       if @scholarship.save
@@ -59,7 +59,7 @@ class ScholarshipsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def schoalrship_params
+    def scholarship_params
       params.require(:scholarship).permit(:name, :gender, :date_of_birth, :gpa, :address, :state, :university, :essay)
     end
 end
