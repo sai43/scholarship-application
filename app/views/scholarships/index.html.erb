@@ -7,6 +7,7 @@
 <table class="table">
   <thead>
     <tr>
+      <th>User ID</th>
       <th>Name</th>
       <th>Gender</th>
       <th>Date of birth</th>
@@ -19,6 +20,7 @@
   <tbody>
     <% @scholarships.each do |scholarship| %>
       <tr>
+        <td><%= scholarship.user_id %></td>
         <td><%= scholarship.name %></td>
         <td><%= scholarship.gender %></td>
         <td><%= scholarship.date_of_birth %></td>
@@ -32,9 +34,14 @@
   </tbody>
 </table>
 
+
+<%= link_to 'New Scholarship', new_scholarship_path, class: "btn btn-primary", style: "color:white" %>
+
 <% elsif user_signed_in? && current_user.role == "User" && current_user.scholarship.present? %>
 
- <%= render partial: 'current_user_scholarship' %>
+ <%= render partial: 'show_current_user_scholarship' %>
+
+
 
 <% elsif user_signed_in? && current_user.role == "User" && current_user.scholarship == nil %>
 

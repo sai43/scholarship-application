@@ -11,6 +11,11 @@ class ScholarshipsController < ApplicationController
   def show
   end
 
+  def show_current_user_scholarship
+    @user = User.find(params[:id])
+    @scholarships = Scholarship.where(user_id: @user.id)
+  end
+
   def new
     @scholarship = Scholarship.new
   end
@@ -20,6 +25,8 @@ class ScholarshipsController < ApplicationController
 
   def create
     @scholarship = Scholarship.new(scholarship_params)
+    @scholarship.user_id = current_user.id
+    @scholarship.id = current_user.scholarship_id
 
     respond_to do |format|
       if @scholarship.save
@@ -60,6 +67,6 @@ class ScholarshipsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def scholarship_params
-      params.require(:scholarship).permit(:name, :gender, :date_of_birth, :gpa, :address, :state, :university, :essay)
+      params.require(:scholarship).permit(:name, :gender, :date_of_birth, :gpa, :address, :state, :university, :essay, :user_id)
     end
 end
