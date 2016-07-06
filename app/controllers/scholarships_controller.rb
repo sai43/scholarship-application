@@ -3,6 +3,7 @@ class ScholarshipsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_scholarship, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
+  before_action :check_scholarship, only: %i[new create]
 
   def index
     @scholarships = Scholarship.all
@@ -64,6 +65,13 @@ class ScholarshipsController < ApplicationController
     def set_scholarship
       @scholarship = Scholarship.find(params[:id])
     end
+
+    def check_scholarship
+        if current_user.scholarship.present?
+            redirect_to root_url
+        end
+    end
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def scholarship_params
