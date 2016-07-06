@@ -23,10 +23,12 @@
     <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
+  <% if user_signed_in? && current_user.role == "Admin" %>
     <div class="field">
-    <%= f.label :role %><br>
-    <%= f.text_field :role %>
-  </div>
+      <%= f.label :role %><br>
+      <%= f.text_field :role %>
+    </div>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>

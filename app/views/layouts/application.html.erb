@@ -24,7 +24,11 @@
     <li class="nav-item">
       <a class="nav-link" href="/static_pages/instructions">How To Apply</a>
     </li>
-    <% if user_signed_in? %>
+    <% if user_signed_in? && current_user.role == "Admin" %>
+    <li class="nav-item">
+      <a class="nav-link" href="/scholarships"> All Scholarship Apps</a>
+    </li>
+    <% elsif user_signed_in? && current_user.role =="User" %>
     	<li class="nav-item">
     		<a class="nav-link" href="/scholarships">Your Scholarship App</a>
     	</li>

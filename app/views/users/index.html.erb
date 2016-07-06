@@ -8,7 +8,7 @@
 <table class="table">
   <thead>
     <tr>
-      <td>User ID</td>
+      <th>User ID</th>
       <th>First name</th>
       <th>Last name</th>
       <th>Email</th>
@@ -54,6 +54,9 @@
         <td><%= current_user.first_name %></td>
         <td><%= current_user.last_name %></td>
         <td><%= current_user.email %></td>
+        <td><%= link_to 'Show', current_user, class: "btn btn-success", style: "color:white" %></td>
+        <td><%= link_to 'Edit', edit_user_path(current_user), class: "btn btn-warning", style: "color:white" %></td>
+        <td><%= link_to 'Destroy', current_user, method: :delete, data: { confirm: 'Are you sure you wish to delete this user? This cannot be undone.' }, class: "btn btn-danger", style: "color:white" %></td>
       </tr>
     </tbody>
   </table>

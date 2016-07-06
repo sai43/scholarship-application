@@ -7,13 +7,13 @@
 
   <%= link_to 'New Scholarship', new_scholarship_path, class: "btn btn-primary", style: "color:white" %>
 
-<% elsif user_signed_in? && current_user.role == "User" && current_user.scholarship == nil %>
+<% elsif user_signed_in? && current_user.role == "User"  && current_user.scholarship.nil?%>
 
   <p class="center">It appears that you do not have a scholarship on file with us. Click below to get started!</p>
 
   <%= link_to 'New Scholarship', new_scholarship_path, class: "btn btn-primary", style: "color:white" %>
 
-  <% elsif user_signed_in? && current_user.role == "User" && current_user.scholarship.present? %>
+  <% elsif user_signed_in? && current_user.role == "User" %>
 
   <%= render partial: 'show_current_user_scholarship' %>
 
